@@ -1,8 +1,15 @@
 #include <stdio.h>
-#include <vector>
 #include <string>
 using namespace std;
-// return the index of the first appearance of the pattern in text
+int KMP(const string &, const string &);
+class Solution {
+    public:
+        int strStr(string haystack, string needle) {
+            return KMP(needle, haystack);
+        }
+}
+
+
 int KMP(const string &pattern, const string &text) {
     int n = pattern.size();
     int m = text.size();
@@ -21,8 +28,9 @@ int KMP(const string &pattern, const string &text) {
 }
 
 int main() {
-    const string pattern = "aaabccaaab";
-    const string text = "abasdasdsadaaabccaaabsad";
-    int index  = KMP(pattern, text);
-    printf("%d\n", index);
+    Solution s;
+    const string hayStack = "sadbutsad";
+    const string needle = "sad";
+    print("%d", s.strStr(hayStack, needle));
+    return 0;
 }
