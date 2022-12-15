@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string>
+#include <vector>
+
 using namespace std;
 int KMP(const string &, const string &);
 class Solution {
@@ -7,7 +9,7 @@ class Solution {
         int strStr(string haystack, string needle) {
             return KMP(needle, haystack);
         }
-}
+};
 
 
 int KMP(const string &pattern, const string &text) {
@@ -29,8 +31,8 @@ int KMP(const string &pattern, const string &text) {
 
 int main() {
     Solution s;
-    const string hayStack = "sadbutsad";
+    const string hayStack = "sdadbutsadewr";
     const string needle = "sad";
-    print("%d", s.strStr(hayStack, needle));
+    printf("%d\n", s.strStr(hayStack, needle));
     return 0;
 }
