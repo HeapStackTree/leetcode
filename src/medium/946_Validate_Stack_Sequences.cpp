@@ -9,6 +9,7 @@ public:
         for (int i = 0, j = 0; i < pushed.size(); i++) {
             stk.push(pushed[i]);
             while (!stk.empty() && stk.top() == popped[j]) {
+                j++;
                 stk.pop();
             }
         }
